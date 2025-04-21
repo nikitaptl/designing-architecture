@@ -1,6 +1,6 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 YaBrowser/25.2.0.0 Safari/537.36" version="26.2.13">
   <diagram name="Страница — 1" id="koNQwcocpZvyZCczPgKp">
-    <mxGraphModel dx="1756" dy="632" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="2789" dy="1333" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -132,14 +132,16 @@
         <mxCell id="XuumdNyfaNdkF0Ape0eL-28" value="&lt;div&gt;&lt;font style=&quot;&quot;&gt;&lt;span style=&quot;font-size: 15px;&quot;&gt;&lt;b&gt;DataStorage&lt;/b&gt;&lt;/span&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 10px;&quot;&gt;[Component: Storage, C++]&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 9px;&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;Агрегирует и хранит все рыночные и торговые данные в памяти.&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Montserrat;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DMontserrat;fillColor=#ffcc99;strokeColor=none;" vertex="1" parent="1">
           <mxGeometry x="327.5" y="820" width="260" height="130" as="geometry" />
         </mxCell>
-        <mxCell id="XuumdNyfaNdkF0Ape0eL-46" value="HTTP-запрос" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;dashed=1;dashPattern=8 8;" edge="1" parent="1" source="XuumdNyfaNdkF0Ape0eL-29" target="XuumdNyfaNdkF0Ape0eL-8">
-          <mxGeometry relative="1" as="geometry" />
+        <mxCell id="XuumdNyfaNdkF0Ape0eL-46" value="HTTPS-запрос" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;dashed=1;dashPattern=8 8;" edge="1" parent="1" source="XuumdNyfaNdkF0Ape0eL-29" target="XuumdNyfaNdkF0Ape0eL-8">
+          <mxGeometry x="0.0083" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
         </mxCell>
         <mxCell id="XuumdNyfaNdkF0Ape0eL-29" value="&lt;div&gt;&lt;span style=&quot;font-size: 15px;&quot;&gt;&lt;b&gt;MarketDataLoader&lt;/b&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 10px;&quot;&gt;[Component: Loader, C++]&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 9px;&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;Загружает сжатые рыночные данные с серверов бирж в формате .pb&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Montserrat;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DMontserrat;fillColor=#ffcc99;strokeColor=none;" vertex="1" parent="1">
           <mxGeometry x="122.5" y="1020" width="260" height="130" as="geometry" />
         </mxCell>
-        <mxCell id="XuumdNyfaNdkF0Ape0eL-45" value="SQL-запрос" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;dashed=1;dashPattern=8 8;" edge="1" parent="1" source="XuumdNyfaNdkF0Ape0eL-30" target="XuumdNyfaNdkF0Ape0eL-9">
-          <mxGeometry relative="1" as="geometry">
+        <mxCell id="XuumdNyfaNdkF0Ape0eL-45" value="&lt;div&gt;Запрос&lt;/div&gt;SQL (ClickHouse binary)" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;dashed=1;dashPattern=8 8;" edge="1" parent="1" source="XuumdNyfaNdkF0Ape0eL-30" target="XuumdNyfaNdkF0Ape0eL-9">
+          <mxGeometry x="0.0083" relative="1" as="geometry">
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
