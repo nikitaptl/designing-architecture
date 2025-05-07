@@ -1,0 +1,127 @@
+openapi: 3.0.0
+info:
+  title: Stock Exchange Historical Market Data API
+  version: "1.0.0"
+  description: >
+    API для получения исторических рыночных данных по инструменту и дате.
+    Ответ представляет собой архив `.pb.zstd`, содержащий массивы Protobuf-сообщений `Trade` и `OrderBookUpdate`.
+
+paths:
+  /data/{date}/{symbol}:
+    get:
+      summary: Получить архив с историческими данными
+      description: >
+        Загружает бинарный архив с данными по заданному инструменту за конкретную дату.
+        Данные представлены в формате protobuf, сжатом через zstd.
+      parameters:
+        - in: path
+          name: date
+          schema:
+            type: string
+            format: date
+          required: true
+          description: Дата данных (формат YYYY-MM-DD)
+        - in: path
+          name: symbol
+          schema:
+            type: string
+          required: true
+          description: Идентификатор инструмента (например, BTCUSDT)
+      responses:
+        '200':
+          description: Успешная загрузка архива с данными
+          content:
+            application/octet-stream:
+              schema:
+                type: string
+                format: binary
+                description: Содержит `.pb.zstd` архив с protobuf-массивами
+        '404':
+          description: Архив за указанную дату/инструмент не найден
+        '500':
+          description: Внутренняя ошибка сервера
+components:
+  schemas:
+    Trade:
+      description: Протобаф-сообщение Trade
+      type: object
+      properties:
+        trade_id:
+          type: integer
+          format: uint64
+        transact_time:
+          type: integer
+          format: uint64
+        output_time:
+          type: integer
+          format: uint64
+        price:
+          type: number
+          format: double
+        volume:
+          type: number
+          format: double
+        input_time:
+          type: integer
+          format: uint64
+        buy_order_id:
+          type: integer
+          format: uint64
+          nullable: true
+        sell_order_id:
+          type: integer
+          format: uint64
+          nullable: true
+        side:
+          type: string
+          enum: [BID, ASK]
+    OrderBookUpdate:
+      description: Протобаф-сообщение OrderBookUpdate
+      type: object
+      properties:
+        l2_snapshot:
+          $ref: '#/components/schemas/L2Snapshot'
+        first_update_id:
+          type: integer
+          format: uint64
+        prev_update_id:
+          type: integer
+          format: uint64
+    L2Snapshot:
+      description: Протобаф-сообщение L2Snapshot
+      type: object
+      properties:
+        update_id:
+          type: integer
+          format: uint64
+        transact_time:
+          type: integer
+          format: uint64
+        output_time:
+          type: integer
+          format: uint64
+        input_time:
+          type: integer
+          format: uint64
+        bids:
+          type: array
+          items:
+            $ref: '#/components/schemas/Quote'
+        asks:
+          type: array
+          items:
+            $ref: '#/components/schemas/Quote'
+    Quote:
+      description: Протобаф-сообщение Quote
+      type: object
+      properties:
+        price:
+          type: number
+          format: double
+        volume:
+          type: number
+          format: double
+        orders_count:
+          type: integer
+          format: int32
+          nullable: true
