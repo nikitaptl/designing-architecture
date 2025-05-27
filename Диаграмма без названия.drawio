@@ -5,10 +5,10 @@
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
         <mxCell id="hu5X0nDmfTP_csooRlKt-1" value="AI Cloud Guard" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="370" y="300" width="120" height="80" as="geometry" />
+          <mxGeometry x="370" y="300" width="119" height="80" as="geometry" />
         </mxCell>
         <mxCell id="hu5X0nDmfTP_csooRlKt-2" value="Банк" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="540" y="180" width="120" height="60" as="geometry" />
+          <mxGeometry x="540" y="210" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="hu5X0nDmfTP_csooRlKt-7" value="&lt;font style=&quot;font-size: 13px;&quot;&gt;1&lt;/font&gt;" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0;entryDx=0;entryDy=0;startArrow=classic;startFill=1;" edge="1" parent="1" source="hu5X0nDmfTP_csooRlKt-3" target="hu5X0nDmfTP_csooRlKt-1">
           <mxGeometry x="0.0034" relative="1" as="geometry">
@@ -16,13 +16,13 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="hu5X0nDmfTP_csooRlKt-3" value="AI-стартап" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="190" y="180" width="120" height="60" as="geometry" />
+          <mxGeometry x="190" y="210" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="hu5X0nDmfTP_csooRlKt-4" value="Облачный провайдер" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="190" y="440" width="120" height="60" as="geometry" />
+          <mxGeometry x="190" y="400" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="hu5X0nDmfTP_csooRlKt-5" value="Инвестор или грантодатель" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="540" y="440" width="120" height="60" as="geometry" />
+          <mxGeometry x="540" y="400" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="hu5X0nDmfTP_csooRlKt-8" value="&lt;font style=&quot;font-size: 13px;&quot;&gt;2&lt;/font&gt;" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0;entryDx=0;entryDy=0;startArrow=classic;startFill=1;" edge="1" parent="1" source="hu5X0nDmfTP_csooRlKt-2" target="hu5X0nDmfTP_csooRlKt-1">
           <mxGeometry relative="1" as="geometry">
